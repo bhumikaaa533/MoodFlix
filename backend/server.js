@@ -10,7 +10,7 @@ app.use(express.json());
 
 /* ================= DATABASE ================= */
 
-mongoose.connect("mongodb://127.0.0.1:27017/moodflix")
+mongoose.connect("mongodb+srv://Moodflix:moodflix@123@cluster0.93qwmku.mongodb.net/?appName=Cluster0")
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.log(err));
 

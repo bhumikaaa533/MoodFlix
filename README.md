@@ -18,7 +18,7 @@ MoodFlix is a mood-based movie discovery web application where users can find mo
 
 🌐 Live Demo
 
-Coming Soon 🚀
+https://exquisite-parfait-b9252a.netlify.app
 
 ---
 
