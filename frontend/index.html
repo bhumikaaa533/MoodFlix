@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<title>MoodFlix Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+
+<header>
+<h1 class="logo">MoodFlix Pro 🎬</h1>
+<p id="moodTagline" class="mood-tagline"></p>
+
+<input id="searchBox" placeholder="Search movies...">
+<button id="themeToggle">🌙</button>
+<div id="suggestions" class="suggestions-box"></div>
+<div id="row" class="row"></div>
+<div id="searchResults" class="row"></div>
+
+<select id="moodSelect">
+    <option value="">Select Mood</option>
+    <option value="action">Action</option>
+    <option value="comedy">Comedy</option>
+    <option value="horror">Horror</option>
+    <option value="romance">Romance</option>
+</select>
+
+<a href="watchlist.html" class="watchlist-link">⭐ Watchlist
+<span id="watchlistCount" class="watchlist-count">0</span>
+<button onclick="logout()">Logout</button>
+</a>
+</header>
+
+<h2>Trending Now</h2>
+<div id="movieRow" class="row"></div>
+
+<h2>Mood-Based Movies</h2>
+<div id="moodRow" class="row"></div>
+
+<!--Add this-->
+<h2 class="section title">Netflix Categories</h2>
+<!--Categories generated here-->
+<div id="categories"></div>
+
+<!-- Trailer Modal -->
+<div id="trailerModal" class="modal">
+ <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <iframe id="trailerFrame"></iframe>
+</div>
+
+<div class="nav-right">
+    <span id="username"></span>
+    <button onclick="logout()">Logout</button>
+</div>
+
+
+<!-- Scripts order MUST be correct -->
+<script src="api.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

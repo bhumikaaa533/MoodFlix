@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<title>Movie Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="details-container">
+        <button onclick="goback()" class="back-button">⬅ Back</button>
+
+<h1 id="movieTitle"></h1>
+
+<img id="moviePoster" width="250">
+
+<p id="movieOverview"></p>
+<p><b>Release Date:</b> <span id="movieRelease"></span></p>
+<p><b>Rating:</b> <span id="movieRating"></span></p>
+<p><b>Genres:</b> <span id="movieGenres"></span></p>
+
+<br>
+<button id="watchBtn">⭐ Add to Watchlist</button>
+
+<script src="api.js"></script>
+<script src="details.js"></script>
+
+</body>
+</html>
