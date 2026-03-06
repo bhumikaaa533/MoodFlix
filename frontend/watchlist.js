@@ -32,7 +32,7 @@ showWatchlist();
 
 async function loadWatchlist() {
 
-  const res = await fetch("http://localhost:5000/api/watchlist");
+  const res = await fetch("https://moodflix-9b1h.onrender.com/api/watchlist");
   const data = await res.json();
 
   const container = document.getElementById("WatchlistContainer");

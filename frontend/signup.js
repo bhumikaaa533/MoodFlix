@@ -5,7 +5,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  const res = await fetch("api/signup", {
+  const res = await fetch("https://moodflix-9b1h.onrender.com/api/signup", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, password })
