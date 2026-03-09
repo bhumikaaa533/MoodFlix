@@ -427,3 +427,11 @@ background: linear-gradient(135deg,#4facfe,#00f2fe);
 .thrill-theme{
 background: linear-gradient(135deg,#ff512f,#dd2476);
 }
+
+.movie-info{
+  display:flex;
+  justify-content:space-between;
+  font: size 14px;
+  margin-top:5px;
+  color:#add;
+}

@@ -106,6 +106,14 @@ async function searchMovies(query) {
 
     moviediv.innerHTML = `
       <img src="${IMG_URL + movie.poster_path}">
+      <h3>${movie.title}</h3>
+
+      <div class="movie-info">
+      <span>${movie.vote_average}</span>
+      <span>${movie.release_date ? movie.release_date.substring(0,4):"N/A"}
+      </span>
+      </div>
+
       <button onclick="openTrailer(${movie.id})">▶ Trailer</button>
       <button onclick="openDetails(${movie.id})">Details</button>
     `;

@@ -66,6 +66,19 @@ MoodFlix
 
 ---
 
+## 🎬 Project Preview
+
+### Home Page
+![Home](assets/home.png)
+
+### Movie Details
+![Movie Details](assets/movie-details.png)
+
+### Mood Based Theme
+![Mood Theme](assets/mood-theme.png)
+
+---
+
 ⚙ Installation
 
 Clone the repository
