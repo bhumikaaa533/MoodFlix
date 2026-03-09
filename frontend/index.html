@@ -17,13 +17,26 @@
 <div id="row" class="row"></div>
 <div id="searchResults" class="row"></div>
 
-<select id="moodSelect">
-    <option value="">Select Mood</option>
-    <option value="action">Action</option>
-    <option value="comedy">Comedy</option>
-    <option value="horror">Horror</option>
-    <option value="romance">Romance</option>
+<div class="filters">
+
+<select id="moodSelect" onchange="changeMood()">
+<option value="">Select Mood</option>
+<option value="fun">😄 Fun</option>
+<option value="romantic">❤️ Romantic</option>
+<option value="dark">🌑 Dark</option>
+<option value="thrill">🔥 Thrill</option>
 </select>
+
+<select id="genreSelect" onchange="changeGenre()">
+<option value="">Select Genre</option>
+<option value="28">Action</option>
+<option value="35">Comedy</option>
+<option value="10749">Romance</option>
+<option value="27">Horror</option>
+<option value="16">Animation</option>
+</select>
+
+</div>
 
 <a href="watchlist.html" class="watchlist-link">⭐ Watchlist
 <span id="watchlistCount" class="watchlist-count">0</span>

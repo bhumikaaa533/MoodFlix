@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const express = require("express");
@@ -10,9 +10,13 @@ app.use(express.json());
 
 /* ================= DATABASE ================= */
 
-mongoose.connect("mongodb+srv://Moodflix:moodflix@123@cluster0.93qwmku.mongodb.net/?appName=Cluster0")
-.then(() => console.log("MongoDB connected"))
-.catch(err => console.log(err));
+const mongoose=require("mongoose");
+mongoose.connect("mongodb+srv://Moodflix:moodflix123@cluster0.93qwmku.mongodb.net/moodflix") 
+.then(() => {console.log("MongoDB connected");
+})
+.catch(err => {console.log("MongoDB error",err);
+});
+
 
 /* ================= USER MODEL ================= */
 
@@ -133,9 +137,9 @@ app.get("/api/watchlist/:email", async (req, res) => {
   }
 });
 
-/* ================= SERVER ================= */
 
-const PORT = 5000;
-app.listen(PORT, () => {
+/*======Server Start=======*/
+
+app.listen(5000,() => {
   console.log("Server running on port 5000");
 });

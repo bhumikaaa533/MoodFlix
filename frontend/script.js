@@ -146,6 +146,9 @@ function openDetails(movieId) {
   window.location.href = "details.html";
 }
 
+
+
+
 async function loadMoodMovies(mood) {
     const url=moodMoviesURL(mood);
     const res = await fetch(url);
@@ -379,4 +382,81 @@ toggleBtn.addEventListener("click", () => {
 
   }
 
-});
+})
+
+
+function changeGenre(){
+
+  const genre = document.getElementById("genreSelect").value;
+
+  fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${genre}`)
+  .then(res => res.json())
+  .then(data => {
+
+    const container = document.getElementById("movieRow");
+    container.innerHTML = "";
+
+    data.results.forEach(movie => {
+
+      const div = document.createElement("div");
+
+      div.innerHTML = `
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+        <p>${movie.title}</p>
+      `;
+
+      container.appendChild(div);
+
+    });
+
+  });
+
+}
+
+function changeMood(){
+  const mood=document.getElementById("moodSelect").value
+
+  if(mood=="fun") changeGenre(35)
+  if(mood=="romantic") changeGenre(10749)
+  if(mood=="dark") changeGenre(27)
+  if(mood=="thrill") changeGenre(28)
+      
+}
+
+
+function detectMood(){
+
+const mood = document.getElementById("moodSelect").value
+
+document.body.classList.remove(
+"happy-theme",
+"romantic-theme",
+"sad-theme",
+"thrill-theme"
+)
+
+let genre=""
+
+if(mood==="happy"){
+document.body.classList.add("happy-theme")
+genre="35"
+}
+
+if(mood==="romantic"){
+document.body.classList.add("romantic-theme")
+genre="10749"
+}
+
+if(mood==="sad"){
+document.body.classList.add("sad-theme")
+genre="18"
+}
+
+if(mood==="thrill"){
+document.body.classList.add("thrill-theme")
+genre="28"
+}
+
+loadMovies(genre)
+
+}
