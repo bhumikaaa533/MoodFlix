@@ -1,3 +1,5 @@
+require("dotenv").config()
+const_API_KEY=process.env.const_API_KEY
 
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -145,4 +147,3 @@ app.listen(5000,() => {
 });
 
 
-require("dotenv").config()

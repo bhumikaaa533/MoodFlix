@@ -1,4 +1,4 @@
-const API_KEY = process.env.API_KEY
+const API_KEY = "8dcb2f5b9a60ae6d4630e36612dcbd4e";
 
 const requests = {
   trending: `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`,

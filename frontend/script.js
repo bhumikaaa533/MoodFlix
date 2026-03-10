@@ -401,29 +401,22 @@ function changeGenre(){
   .then(res => res.json())
   .then(data => {
 
-    let movies=data.results
-    movies.sort((a,b)=>b.vote_average-a.vote_average)
-    movies.forEach(movie=>{displayMovie(movie)})
-
     const container = document.getElementById("movieRow");
     container.innerHTML = "";
 
-    data.results.forEach(movie => {
+    let movies=data.results;
 
-      const div = document.createElement("div");
-
-      div.innerHTML = `
-        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
-        <p>${movie.title}</p>
-      `;
+    movies.forEach(movie => {
+      const div=document.createElement("div");
+      div.innerHTML= `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}"><p>${movie.title}</p></img>`;
 
       container.appendChild(div);
-
     });
-
   });
+};
 
-}
+
+
 
 function changeMood(){
   const mood=document.getElementById("moodSelect").value
@@ -470,5 +463,4 @@ genre="28"
 }
 
 loadMovies(genre)
-
 }
