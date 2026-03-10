@@ -46,36 +46,49 @@ Authentication
 
 ---
 
-📂 Project Structure
-
-MoodFlix
+Project Structure
 │
 ├── frontend
+│   │
 │   ├── index.html
 │   ├── login.html
 │   ├── signup.html
 │   ├── profile.html
-│   ├── style.css
-│   └── script.js
+│   ├── details.html
+│   │
+│   ├── css
+│   │   └── style.css
+│   │
+│   ├── js
+│   │   ├── script.js
+│   │   ├── login.js
+│   │   ├── signup.js
+│   │   └── details.js
+│   │
+│   └── assets
+│       ├── home.png
+│       ├── genres.png
+│       └── mood-theme.png
 │
 ├── backend
-│   └── server.js
+│   │
+│   ├── server.js
+│   ├── package.json
+│   └── .env
 │
-├── package.json
-└── README.md
+├── README.md
+└── .gitignore
 
 ---
 
 ## 🎬 Project Preview
 
-### Home Page
-![Home](assets/home.png)
 
-### Movie Details
-![Movie Details](assets/movie-details.png)
+![Home](frontend/assets/home.png)
 
-### Mood Based Theme
-![Mood Theme](assets/mood-theme.png)
+![Genres](frontend/assets/genres.png)
+
+![Mood Theme](frontend/assets/mood-theme.png)
 
 ---
 

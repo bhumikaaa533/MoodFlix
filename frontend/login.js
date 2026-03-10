@@ -36,3 +36,7 @@ form.addEventListener("submit", async (e) => {
     alert("An error occurred during login. Please try again.");
   }
 });
+
+function login(){
+  window.location.href="index.html"
+}
