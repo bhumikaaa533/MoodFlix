@@ -435,3 +435,21 @@ background: linear-gradient(135deg,#ff512f,#dd2476);
   margin-top:5px;
   color:#add;
 }
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+.movie-row{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.movie-card{
+width:150px;
+}
+
+}

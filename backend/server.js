@@ -11,7 +11,7 @@ app.use(express.json());
 /* ================= DATABASE ================= */
 
 const mongoose=require("mongoose");
-mongoose.connect("mongodb+srv://Moodflix:moodflix123@cluster0.93qwmku.mongodb.net/moodflix") 
+mongoose.connect(process.env.MONGO_URI) 
 .then(() => {console.log("MongoDB connected");
 })
 .catch(err => {console.log("MongoDB error",err);
@@ -143,3 +143,6 @@ app.get("/api/watchlist/:email", async (req, res) => {
 app.listen(5000,() => {
   console.log("Server running on port 5000");
 });
+
+
+require("dotenv").config()

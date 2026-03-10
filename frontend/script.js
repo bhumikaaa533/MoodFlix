@@ -401,6 +401,10 @@ function changeGenre(){
   .then(res => res.json())
   .then(data => {
 
+    let movies=data.results
+    movies.sort((a,b)=>b.vote_average-a.vote_average)
+    movies.forEach(movie=>{displayMovie(movie)})
+
     const container = document.getElementById("movieRow");
     container.innerHTML = "";
 
